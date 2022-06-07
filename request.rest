@@ -1,0 +1,56 @@
+GET http://localhost:5000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJaaWRhbmUiLCJlbWFpbCI6InppZGFuZUBnbWFpbC5jb20iLCJpYXQiOjE2NTQ1MDYzMTgsImV4cCI6MTY1NDUwNjMzOH0.gzHETZ3sylkfCRYUGKmRGy88W0PetMmqJ3n48rJKlw0
+###
+
+GET http://localhost:5000/users/3
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJaaWRhbmUiLCJlbWFpbCI6InppZGFuZUBnbWFpbC5jb20iLCJpYXQiOjE2NTQ1MDYzMTgsImV4cCI6MTY1NDUwNjMzOH0.gzHETZ3sylkfCRYUGKmRGy88W0PetMmqJ3n48rJKlw0
+###
+
+POST http://localhost:5000/add
+Content-Type: application/json
+
+{
+    "name" : "Andi",
+    "email" : "andi@gmail.com",
+    "gender" : "Male"
+}
+###
+
+PATCH  http://localhost:5000/update/3
+Content-Type: application/json
+
+{
+    "name" : "Andi Z",
+    "email" : "andiz@gmail.com",
+    "gender" : "Male"
+}
+###
+
+DELETE http://localhost:5000/delete/3
+
+# register & login
+
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name" : "Budi",
+    "email" : "budi@gmail.com",
+    "password" : "123",
+    "confPassword" : "123"
+}
+
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email" : "zidane@gmail.com",
+    "password" : "123"
+}
+
+###
+GET http://localhost:5000/token
+
+###
+DELETE http://localhost:5000/logout
